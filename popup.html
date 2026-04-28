@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body {
-      width: 500px;
-      font-family: monospace;
-      font-size: 12px;
-    }
-    .url-item {
-      border-bottom: 1px solid #ccc;
-      padding: 6px;
-      word-break: break-all;
-    }
+    body { width: 600px; font-family: monospace; margin: 0; padding: 10px; }
+    .header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    button { background: #4CAF50; color: white; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+    .clear { background: #f44336; }
+    .item { border-bottom: 1px solid #eee; padding: 8px; }
+    .type { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; margin-bottom: 4px; }
+    .live { background: #ffeb3b; color: #333; }
+    .vod { background: #e3f2fd; color: #1976d2; }
+    .playlist { background: #e8f5e9; color: #388e3c; }
+    .url { font-size: 11px; word-break: break-all; margin: 4px 0; }
+    .copy { background: #2196F3; padding: 2px 6px; font-size: 10px; margin-top: 4px; }
+    .empty { color: #999; text-align: center; padding: 20px; }
   </style>
 </head>
 <body>
-  <h3>嗅探到的视频地址</h3>
+  <div class="header">
+    <span>🎬 web-miner</span>
+    <div><button id="clearBtn" class="clear">清空</button></div>
+  </div>
   <div id="list">加载中...</div>
   <script src="popup.js"></script>
 </body>
